@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <script src="assets/jquerry"></script>
+    <script src="assets/jquery"></script>
 
     <link rel="stylesheet" href="assets/css/principal.css">
 
@@ -22,23 +22,15 @@
     <section id="central">
         <div id="abas">
             <ul>
-                <li id="aba1">TAB1 </li>
-            </ul>
-            <ul>
-                <li id="aba2">TAB2 </li>
-            </ul>
-            <ul>
-                <li id="aba3">TAB3 </li>
+               <?php foreach($categorias as $categoria):?>
+                <li id="aba<?= $categoria->getId()?>"> <?= utf8_encode($categoria->getNome())?> </li>
+                <?php endforeach;?>
             </ul>
         </div>
-        <div id="conteudo da div 1">
-            conteudo da primeira aba
-        </div>
-        <div id="conteudo da div 2">
-            conteudo da segunda aba
-        </div>
-        <div id="conteudo da div 3">
-            conteudo da terceira aba
+        <div class="conteudo aba<?= utf8_encode($produtos->getIdCategoria())?>">
+      
+    
+
         </div>
     </section>
 

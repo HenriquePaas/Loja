@@ -14,10 +14,14 @@ class Produto
     private $foto;
     private $preco;
     private $categoria;
+    private $idCategoria;
 
     /**
      * @param mixed $nome
      */
+    public function setIdCategoria($idCategoria){
+        $this->idCategoria = $idCategoria;
+    }
     public function setNome($nome)
     {
         $this->nome = $nome;
@@ -109,6 +113,9 @@ class Produto
     public function getCategoria()
     {
         return $this->categoria;
+    }
+    public function getIdCategoria(){
+        return $this->idCategoria;
     }
 
 
